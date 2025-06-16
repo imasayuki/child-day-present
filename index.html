@@ -1,0 +1,42 @@
+テクスチャー<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, WebVR! • A-Frame</title>
+    <meta name="description" content="Hello, WebVR! • A-Frame">
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body>
+    <a-scene embedded arjs>
+      
+     <a-assets >
+	        <a-asset-item id="child1" src="https://cdn.glitch.global/062f604c-45fe-47dd-9aaf-e479a8f75ffa/stitch.glb?v=1714113820050"></a-asset-item>
+     </a-assets>
+     <a-assets >
+	        <a-asset-item id="child2" src="https://cdn.glitch.global/062f604c-45fe-47dd-9aaf-e479a8f75ffa/princess_peach_fanart_super_mario_bros.glb?v=1714114999632"></a-asset-item>
+     </a-assets> 
+      
+      
+      <a-marker preset="hiro">
+        <a-entity  gltf-model="#child1" 
+                  position="0 0.5 0" 
+                  scale="0.015 0.015 0.015" 
+                   animation-mixer animation="property: rotation; to: 0 360 0; loop: true; dur: 3000" >
+      
+        </a-entity>
+      </a-marker>
+      
+      <a-marker type="pattern" url="https://cdn.glitch.global/b2e08ad4-ac10-4e12-b696-4f2ece74f0c2/pattern-ITOH.patt?v=1707370008589">
+       <a-entity  gltf-model="#child2" 
+                  position="0 0.5 0" 
+                  scale="0.2 0.2 0.2" 
+                   animation-mixer animation="property: rotation; to: 0 360 0; loop: true; dur: 3000" >
+      
+        </a-entity>
+       </a-marker>
+
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
