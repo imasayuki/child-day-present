@@ -1,4 +1,4 @@
-modules = ["web", "nodejs-20"]
+modules = ["web"]
 
 # 使用する環境（nixのバージョンとパッケージを指定）
 [nix]
